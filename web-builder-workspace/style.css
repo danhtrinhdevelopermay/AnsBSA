@@ -1,0 +1,158 @@
+/* Variables */
+:root {
+  --primary: #3B82F6;
+  --secondary: #1E40AF;
+  --accent: #F59E0B;
+  --white: #FFFFFF;
+  --black: #111111;
+  --gray-light: #F5F5F5;
+  --gray-dark: #333333;
+
+  --font-primary: 'Poppins', sans-serif; /* Replace with your preferred font */
+  --font-secondary: 'Open Sans', sans-serif; /* Replace with your preferred font */
+
+  --animation-duration: 0.5s;
+  --animation-easing: ease-in-out;
+}
+
+
+/* Typography */
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  margin: 0;
+  color: var(--black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+
+
+/* Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: var(--gray-dark);
+  color: var(--white);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.feature {
+  background-color: var(--gray-light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform var(--animation-duration) var(--animation-easing);
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Call to Action Section */
+.cta {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.cta button {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--animation-duration) var(--animation-easing);
+}
+
+.cta button:hover {
+  background-color: darken(var(--secondary), 10%); /* Adjust darken value as needed */
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations (Example) */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn var(--animation-duration) var(--animation-easing) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* Add more styles as needed for other sections and components */
+
+/*Example usage of animation*/
+.hero h1 {
+  animation: fadeIn 1s ease-in-out;
+}
